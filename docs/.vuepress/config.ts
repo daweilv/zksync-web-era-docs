@@ -86,6 +86,11 @@ export default defineUserConfig({
       window.addEventListener('load', function() {
         let contributors = document.querySelectorAll('.contributor');
         let contributorArr = Array.from(contributors);
+
+        if (!contributorArr.length) {
+          return;
+        }
+
         let topFive = contributorArr.slice(0, 5);
 
         topFive.forEach(function(contributor) {
