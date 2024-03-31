@@ -87,50 +87,23 @@ export default defineUserConfig({
         let contributors = document.querySelectorAll('.contributor');
         let contributorArr = Array.from(contributors);
         let topFive = contributorArr.slice(0, 5);
-      
+
         topFive.forEach(function(contributor) {
           contributor.textContent = contributor.textContent.replace(',', '');
         });
-      
+
         let lastComma = contributorArr[4];
         lastComma.textContent = lastComma.textContent.replace(',', '');
-      
+
         let updatedList = topFive.map(function(contributor) {
           return contributor.textContent;
         }).join(', ');
-          
+
         let contributorsDiv = document.querySelector('.contributors');
         contributorsDiv.innerHTML = '<span class="label">Contributors: </span>' + updatedList;
-      
-      });
-      function addNetwork(network) {
-        const config = {
-          mainnet: {
-            chainId: '0x144',
-            rpcUrls: ['https://mainnet.era.zksync.io'],
-            blockExplorerUrls: ['https://explorer.zksync.io/'],
-          },
-          testnet: {
-            chainId: '0x12c',
-            rpcUrls: ['https://sepolia.era.zksync.dev'],
-            blockExplorerUrls: ['https://sepolia.explorer.zksync.dev/'],
-          },
-        }[network];
 
-        window.ethereum.request({
-          method: 'wallet_addEthereumChain',
-          params: [
-            {
-              chainId: config.chainId,
-      				chainName: network === 'mainnet' ? 'zkSync Era Mainnet' : 'zkSync Era Sepolia Testnet',
-              nativeCurrency: { name: 'Ethereum', symbol: 'ETH', decimals: 18 },
-      				iconUrls: ['https://docs.zksync.io/favicon-32x32.png'],
-              rpcUrls: config.rpcUrls,
-              blockExplorerUrls: config.blockExplorerUrls,
-            },
-          ],
-        });
-      }
+      });
+
       `,
     ],
   ],
