@@ -18,7 +18,11 @@ Fill in the following details for the zkSync network:
 
 ## Mainnet network info
 
+Add zkSync Era Mainnet automatically using the button below:
+
 <network-adder network="mainnet"></network-adder>
+
+**Network details:**
 
 - Network Name: `zkSync Era Mainnet`
 - RPC URL: `https://mainnet.era.zksync.io`
