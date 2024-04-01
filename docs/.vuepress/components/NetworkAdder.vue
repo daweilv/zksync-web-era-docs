@@ -47,6 +47,7 @@ function addNetwork() {
   justify-content: center;
   padding: 4px 8px;
   gap: 4px;
+  cursor: pointer;
 }
 
 img[src*="/images/metamask_logo.svg"] {
