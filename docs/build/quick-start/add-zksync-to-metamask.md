@@ -29,7 +29,11 @@ Fill in the following details for the zkSync network:
 
 ## Sepolia testnet network info
 
+Add zkSync Era testnet automatically using the button below:
+
 <network-adder network="testnet"></network-adder>
+
+**Network details:**
 
 - Network Name: `zkSync Era Sepolia Testnet`
 - RPC URL: `https://sepolia.era.zksync.dev`
